@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message Form</title>
+</head>
+<body>
+    <%- include('navbar', {links: links}) %>
+    <form action="/new" method="POST">
+        <h1> New Message Form</h1>
+
+        <label for="author">Author: </label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="messageText">Message: </label>
+        <input type="text" id="messageText" name="messageText" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

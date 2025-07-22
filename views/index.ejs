@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <%- include('navbar', {links: links}) %>
+
+    <ul>
+        <% for (let i = 0; i < messages.length; i++) { %>
+            <li>
+                <div>User: <%= messages[i].user %>"</div>
+                <div>Message: <%= messages[i].text %>"</div>
+                <div>date: <%= messages[i].added %>"</div>
+                <a href="/messages/<%= messages[i].id %>">
+                    <button class="details" type="button">Details</button>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+
+</body>
+</html>
